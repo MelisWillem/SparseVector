@@ -1,3 +1,9 @@
+module;
+#include<type_traits>
+
+export module spr:length;
+export import :indexlist;
+
 namespace spr{
     template<typename List>
     struct length;
@@ -8,6 +14,6 @@ namespace spr{
     {
     };
 
-    template<typename List>
-    static constexpr std::size_t length_v = length<List>::value;
+    export template<typename List>
+    constexpr std::size_t length_v = length<List>::value;
 }

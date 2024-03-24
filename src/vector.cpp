@@ -1,13 +1,16 @@
-#ifndef VECTOR_HPP
-#define VECTOR_HPP
+module;
 
 #include<utility>
-#include<type_traits>
-#include<basics.hpp>
+
+export module spr;
+export import :relativeindex;
+export import :has_same_index_type;
+export import :join;
+export import :equals;
 
 namespace spr{
 
-template<
+export template<
     typename DataType,
     typename Tindexes
         >
@@ -102,7 +105,7 @@ using SumOperation = BinOperation<Left, Right, AddPolicy>;
 template<typename Left, typename Right>
 using SubOperation = BinOperation<Left, Right, SubPolicy>;
 
-template<
+export template<
     typename TLeftRef,
     typename TRightRef,
     typename TLeft = std::remove_reference_t<TLeftRef>,
@@ -123,7 +126,7 @@ inline auto operator+(
         std::forward<TRightRef>(right));
 }
 
-template<
+export template<
     typename TLeftRef,
     typename TRightRef,
     typename TLeft = std::remove_reference_t<TLeftRef>,
@@ -145,5 +148,3 @@ inline auto operator-(
 }
 
 }
-
-#endif

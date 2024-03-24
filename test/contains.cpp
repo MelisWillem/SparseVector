@@ -1,5 +1,6 @@
 #include<catch2/catch_test_macros.hpp>
-#include"basics.hpp"
+
+import spr;
 
 TEST_CASE("If the index is in the Indexlist, check if contains agrees", "[Indexlist]"){
     using namespace spr;

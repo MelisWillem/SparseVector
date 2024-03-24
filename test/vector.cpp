@@ -1,5 +1,6 @@
 #include<catch2/catch_test_macros.hpp>
-#include<vector.hpp>
+
+import spr;
 
 TEST_CASE("Create simple vector with values, and read out it's values again", "[vector]"){
     auto vec = spr::Vector<double, spr::Indexlist<1,2>>{double{3}, double{4}};

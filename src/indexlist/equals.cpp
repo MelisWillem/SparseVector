@@ -1,3 +1,13 @@
+module;
+#include<type_traits>
+
+export module spr:equals;
+
+export import :length;
+export import :isempty;
+export import :head;
+export import :pop_front;
+
 namespace spr{
     template<
         typename LeftList,
@@ -24,6 +34,6 @@ namespace spr{
             && tailEqual::value;
     };
 
-    template<typename Left, typename Right>
+    export template<typename Left, typename Right>
     constexpr bool equals_v = equals<Left, Right>::value;
 }

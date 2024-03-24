@@ -1,3 +1,7 @@
+export module spr:isempty;
+
+export import :indexlist;
+
 namespace spr{
 
 template<typename List>
@@ -8,7 +12,7 @@ struct is_empty<Indexlist<vals...>>{
     static constexpr bool value = (sizeof...(vals) == 0);
 };
 
-template<typename List>
-static constexpr bool is_empty_v = is_empty<List>::value;
+export template<typename List>
+constexpr bool is_empty_v = is_empty<List>::value;
 
 }

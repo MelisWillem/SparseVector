@@ -1,9 +1,21 @@
+module;
+#include<type_traits>
+
+export module spr:insert_index;
+
+export import :isempty;
+export import :push_front;
+export import :indexlist;
+export import :head;
+export import :push_front;
+export import :pop_front;
+
 namespace spr{
 
 template<auto element, typename List, bool = is_empty_v<List>>
 struct insert_index;
 
-template<auto element, typename List>
+export template<auto element, typename List>
 using insert_index_t = typename insert_index<element, List>::Type;
 
 template<auto element, typename List>
