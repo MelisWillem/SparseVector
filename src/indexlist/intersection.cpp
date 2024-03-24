@@ -1,3 +1,14 @@
+module;
+#include<type_traits>
+
+export module spr:intersection;
+
+export import :isempty;
+export import :push_front;
+export import :head;
+export import :pop_front;
+export import :contains;
+
 namespace spr{
 
 template<typename List1, typename List2, bool = is_empty_v<List1>>

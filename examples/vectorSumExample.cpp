@@ -1,5 +1,6 @@
 #include<iostream>
-#include<vector.hpp>
+
+import spr;
 
 int main(){
     std::cout << "creating 2 vectors" << std::endl;

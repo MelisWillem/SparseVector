@@ -1,5 +1,14 @@
+module;
+#include<type_traits>
+
+export module spr:has_same_index_type;
+
+import :isempty;
+import :head;
+
 namespace spr{
 
+export
 template<
     typename left,
     typename right,
@@ -8,10 +17,10 @@ template<
     >
 struct has_same_index_type;
 
-template<
+export template<
     typename left,
     typename right>
-static constexpr bool has_same_index_type_v =  
+constexpr bool has_same_index_type_v =  
     has_same_index_type<left, right>::value;
 
 template<typename left,typename right>

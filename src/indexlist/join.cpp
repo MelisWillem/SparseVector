@@ -1,3 +1,10 @@
+export module spr:join;
+
+export import :pop_front;
+export import :isempty;
+export import :insert_index;
+export import :pop_front;
+
 namespace spr{
 
 template<
@@ -18,7 +25,7 @@ struct join<left,right,true>{
     using Type = right;
 };
 
-template<typename left, typename right>
+export template<typename left, typename right>
 using join_t = typename join<left, right>::Type;
 
 }

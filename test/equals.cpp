@@ -1,5 +1,6 @@
 #include<catch2/catch_test_macros.hpp>
-#include"basics.hpp"
+
+import spr;
 
 TEST_CASE("Check if [1]==[1]", "[Indexlist]"){
     using leftList = spr::Indexlist<1>;

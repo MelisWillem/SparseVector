@@ -1,3 +1,14 @@
+module;
+#include <string>
+#include <cstddef>
+
+export module spr:string;
+
+export import :head;
+export import :pop_front;
+export import :length;
+
+
 namespace spr{
 
 template<typename List, bool firstCall = true, size_t = length_v<List>>
@@ -34,7 +45,7 @@ struct to_string<List, false, length>
             + to_string<pop_front_t<List>, false>().value;
 };
 
-template<typename List>
+export template<typename List>
 std::string to_string_v(){return to_string<List>().value;}
 
 }

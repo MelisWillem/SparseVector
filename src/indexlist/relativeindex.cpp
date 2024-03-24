@@ -1,3 +1,11 @@
+module;
+#include<type_traits>
+
+export module spr:relativeindex;
+
+export import :contains;
+export import :pop_front;
+
 namespace spr{
     template<
         auto indexSparse,
@@ -24,7 +32,7 @@ namespace spr{
     {
     };
 
-    template<auto indexSparse, typename List>
-    static constexpr auto relative_index_v 
+    export template<auto indexSparse, typename List>
+    constexpr auto relative_index_v 
         = relative_index<indexSparse, List>::value;
 }
