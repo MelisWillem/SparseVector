@@ -5,7 +5,8 @@
 - Sparcity is saved at compile time in a compile time list.
 - The values in the vectors itself are stored on the heap at run time.
 - Basic element wise runtime operations are supported.
-- Witten in C++17.
+- Witten in C++20, mostly 17 but it uses modules.
+- Tested with gcc14 (module support is required)
 
 ## Example code
 - Create 2 vectors:
